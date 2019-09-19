@@ -2,17 +2,21 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="12231f76-1328-49a4-9cb4-0733444b7efc" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/components/ButtonForActive.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/CountItems.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/ItemTodoList.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/TodoList.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../jquery/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../jquery/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../jquery/js.js" beforeDir="false" afterPath="$PROJECT_DIR$/../jquery/js.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../node_js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/../node_js/app.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../node_js/controllers/todoController.js" beforeDir="false" afterPath="$PROJECT_DIR$/../node_js/controllers/todoController.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../node_js/model/modelTask.js" beforeDir="false" afterPath="$PROJECT_DIR$/../node_js/model/modelTask.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/react-todo.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/react-todo.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/addTodo/addTodo.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/addTodo.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/ButtonForActive.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ButtonForActive.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/ItemTodoList.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ItemTodoList.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/TodoList.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/TodoList.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -41,7 +45,7 @@
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../jquery" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../node_js" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
@@ -87,7 +91,9 @@
       <option name="presentableId" value="Default" />
       <updated>1568708042433</updated>
       <workItem from="1568708043708" duration="14232000" />
-      <workItem from="1568791702230" duration="28469000" />
+      <workItem from="1568791702230" duration="29183000" />
+      <workItem from="1568877411209" duration="15236000" />
+      <workItem from="1568896028551" duration="18904000" />
     </task>
     <servers />
   </component>
