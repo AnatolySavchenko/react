@@ -1,8 +1,11 @@
-import React from 'react';
+import React, {Component} from 'react';
 
-class ButtonForActive extends React.Component{
+class ButtonForActive extends Component{
 	render() {
-		const { deleteCompleteItems,handleShowTabs} = this.props;
+		const {
+			deleteCompleteItems,
+			handleShowTabs
+		} = this.props;
 		return(
 			<div className='forButton'>
 				<input type='button' className='ArraySorting style-for-input' value='All' onClick={() => handleShowTabs('All')} />
