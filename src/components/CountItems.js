@@ -1,8 +1,10 @@
-import React from 'react';
+import React, {Component} from 'react';
 
-class CountItems extends React.Component{
+class CountItems extends Component{
 	render() {
-		const {items} = this.props;
+		const {
+			items
+		} = this.props;
 		let countArray = items.filter(item => !item.status);
 		return(
 			<div className='forSpan'>

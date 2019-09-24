@@ -1,13 +1,16 @@
-import React from 'react';
+import React, {Component} from 'react';
 
-class ButtonForActive extends React.Component{
+class ButtonForActive extends Component{
 	render() {
-		const { deleteCompleteItems,handleActive,handleCompleted,handleAll,items } = this.props;
+		const {
+			deleteCompleteItems,
+			handleShowTabs
+		} = this.props;
 		return(
 			<div className='forButton'>
-				<input type='button' className='ArraySorting style-for-input' value='All' onClick={() => handleAll(items)} />
-				<input type='button' className='ArraySorting style-for-input' value='Active' onClick={() => handleActive(items)} />
-				<input type='button' className='ArraySorting style-for-input' value='Completed' onClick={() => handleCompleted(items)} />
+				<input type='button' className='ArraySorting style-for-input' value='All' onClick={() => handleShowTabs('All')} />
+				<input type='button' className='ArraySorting style-for-input' value='Active' onClick={() => handleShowTabs('Active')} />
+				<input type='button' className='ArraySorting style-for-input' value='Completed' onClick={() => handleShowTabs('Completed')} />
 				<input type='button' className='ArraySorting style-for-input' value='Delete all' onClick={deleteCompleteItems} />
 			</div>
 		)
