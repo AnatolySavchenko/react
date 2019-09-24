@@ -7,7 +7,6 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/ButtonForActive.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ButtonForActive.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/CountItems.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/CountItems.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/ItemTodoList.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ItemTodoList.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/TodoList.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/TodoList.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/addTodo.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/addTodo.js" afterDir="false" />
@@ -26,7 +25,7 @@
     </option>
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../node_js" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="JsFlowSettings">
     <service-enabled>true</service-enabled>
@@ -88,7 +87,8 @@
       <workItem from="1568791702230" duration="29183000" />
       <workItem from="1568877411209" duration="15236000" />
       <workItem from="1568896028551" duration="18904000" />
-      <workItem from="1569221403733" duration="28116000" />
+      <workItem from="1569221403733" duration="28452000" />
+      <workItem from="1569307777349" duration="28245000" />
     </task>
     <servers />
   </component>
