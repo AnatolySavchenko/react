@@ -13,8 +13,12 @@ class TodoList extends Component {
 		} = this.props;
 
 		return (
-			<div className="for_views_todo">
-				<ul id="list-of-items">
+			<div
+				className="for_views_todo"
+			>
+				<ul
+					id="list-of-items"
+				>
 					{
 						items.map(item => {
 							return <ItemTodoList
@@ -26,7 +30,7 @@ class TodoList extends Component {
 								handleDeleteItem={() => handleDeleteItem(item._id)}
 								changeState={() => changeState(item._id)}
 								onDblClick={(evt) => onDblClick(item._id, evt)}
-								onChangeElement={() => onChangeElement(item.value)}
+								onChangeElement={(evt) => onChangeElement(evt)}
 							/>
 						})
 					}
