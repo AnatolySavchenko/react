@@ -57,6 +57,7 @@ class TodoMain extends Component {
 					classNameEdited,
 					value,
 				};
+				console.log('--------res', res);
 				this.setState({
 					todos: [...todos, newItem],
 					value: ''
