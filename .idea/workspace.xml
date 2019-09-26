@@ -2,14 +2,18 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="12231f76-1328-49a4-9cb4-0733444b7efc" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/components/Header.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/LogIn.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/SignUp.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/TodoMain.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../jquery/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../jquery/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../jquery/js.js" beforeDir="false" afterPath="$PROJECT_DIR$/../jquery/js.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../node_js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/../node_js/app.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/ButtonForActive.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ButtonForActive.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/ItemTodoList.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ItemTodoList.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/TodoList.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/TodoList.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/addTodo.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/addTodo.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -25,7 +29,7 @@
     </option>
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../node_js" />
   </component>
   <component name="JsFlowSettings">
     <service-enabled>true</service-enabled>
@@ -88,7 +92,8 @@
       <workItem from="1568877411209" duration="15236000" />
       <workItem from="1568896028551" duration="18904000" />
       <workItem from="1569221403733" duration="28452000" />
-      <workItem from="1569307777349" duration="28245000" />
+      <workItem from="1569307777349" duration="28733000" />
+      <workItem from="1569393633559" duration="19444000" />
     </task>
     <servers />
   </component>
