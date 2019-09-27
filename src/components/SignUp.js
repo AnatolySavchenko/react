@@ -7,9 +7,13 @@ class SignUp extends Component {
 		userName: '',
 		password: '',
 		passwordCheck: '',
-		formErrors: {userName: '',password: ''},
-		passwordValid:'',
-		formValid:''
+		formErrors: {userName: '', password: ''},
+		passwordValid: '',
+		formValid: '',
+		UserError: '',
+		PasswordErrorSpaces: '',
+		PasswordErrorShort: '',
+		PasswordErrorCheck: ''
 	};
 
 	changeInputName = (e) => {
@@ -45,15 +49,63 @@ class SignUp extends Component {
 			password,
 			passwordCheck
 		}).then((res) => {
-			console.log('--------res', res);
-			
-			this.setState({
-				userName: '',
-				password: '',
-				passwordCheck: ''
-			});
-		});
+			if ('object' === typeof res.data) {
+				this.setState({
+					userName: '',
+					password: '',
+					passwordCheck: ''
+				});
+			}
 
+			switch (res.data) {
+				case "it's User registered":
+					this.setState({
+						UserError: 'UserError'
+					});
+					setTimeout(() => {
+						this.setState({
+							UserError: ''
+						});
+					}, 3000);
+					break;
+				case 'Your password have spaces,please rewrite':
+					this.setState({
+						PasswordErrorSpaces: 'PasswordErrorSpaces'
+					});
+					setTimeout(() => {
+						this.setState({
+							PasswordErrorSpaces: ''
+						});
+					}, 3000);
+					break;
+				case 'Your password very short, you need have min 6 symbols':
+					this.setState({
+						PasswordErrorShort: 'PasswordErrorShort'
+					});
+					setTimeout(() => {
+						this.setState({
+							PasswordErrorShort: ''
+						});
+					}, 3000);
+					break;
+
+				case 'Your password  not match with field check password':
+
+					this.setState({
+						PasswordErrorCheck: 'PasswordErrorCheck'
+					});
+					console.log(this.state);
+					setTimeout(() => {
+						this.setState({
+							PasswordErrorCheck: ''
+						});
+					}, 3000000);
+					break;
+				default:
+			}
+
+		})
+			.catch(e => console.log(e));
 	};
 
 
@@ -106,6 +158,10 @@ class SignUp extends Component {
 							Submit
 						</button>
 					</form>
+					<div className={` error ${this.state.UserError}`}>it's User registered</div>
+					<div className={` error ${this.state.PasswordErrorSpaces}`}>Your password have spaces,please rewrite</div>
+					<div className={` error ${this.state.PasswordErrorShort}`}>Your password very short, you need have min 6 symbols</div>
+					<div className={` error ${this.state.PasswordErrorCheck}`}>Your password  not match with field check password</div>
 				</div>
 			</div>
 		)

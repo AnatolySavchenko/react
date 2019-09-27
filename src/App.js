@@ -8,13 +8,22 @@ import './App.css';
 import Header from './components/Header';
 
 class App extends Component {
+	state = {
+		userPage:''
+	};
+
+	updateData = (value) => {
+		this.setState({ userPage: value })
+	};
 
 	render() {
+		console.log('--------this.state', this.state);
+		
 		return (
 			<BrowserRouter>
 				<Header/>
-				<Route exact path="/" component={TodoMain}/>
-				<Route path="/logIn" component={LogIn}/>
+				<Route exact path="/" component={TodoMain}  />
+				<Route path="/logIn" render={()=><LogIn updateData={this.updateData} />} />
 				<Route path="/signUp" component={SignUp}/>
 			</BrowserRouter>
 		)
