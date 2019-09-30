@@ -174,3 +174,40 @@ input:checked + span {
     width: 100%;
     height: 100%;
 }
+
+.error{
+    display: none;
+}
+.UserError,
+.PasswordErrorSpaces,
+.PasswordErrorShort,
+.PasswordErrorCheck,
+.UserErrorLog,
+.PasswordNotCorrect {
+    display: block;
+    background-color: white;
+    width: 213px;
+    position: relative;
+    text-align: center;
+    float: right;
+}
+
+.UserError{
+    top:-182px;
+}
+.PasswordErrorShort{
+    top: -138px;
+}
+.PasswordErrorSpaces{
+    top: -138px;
+}
+.UserErrorLog{
+    top: -130px;
+}
+.PasswordNotCorrect{
+    top:-75px;
+}
+.PasswordErrorCheck {
+    top:-86px;
+}
+

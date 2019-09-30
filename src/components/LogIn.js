@@ -5,7 +5,10 @@ class LogIn extends Component {
 	state = {
 		users: [],
 		userName: '',
-		password: ''
+		password: '',
+		UserErrorLog: '',
+		PasswordNotCorrect: '',
+		userPage:'test'
 	};
 
 
@@ -29,11 +32,40 @@ class LogIn extends Component {
 			password
 		})
 			.then(res => {
-				console.log('--------res', res);
+				if (res.data === userName) {
+					switch (res.data) {
+						case "Not find User":
+							this.setState({
+								UserErrorLog: 'UserErrorLog'
+							});
+							console.log(this.state);
+							setTimeout(() => {
+								this.setState({
+									UserErrorLog: ''
+								});
+							}, 3000);
+							break;
+						case 'Not correct password':
+							this.setState({
+								PasswordNotCorrect: 'PasswordNotCorrect'
+							});
+							setTimeout(() => {
+								this.setState({
+									PasswordNotCorrect: ''
+								});
+							}, 3000);
+							break;
+						default:
+					}
+				}else{
+					// this.setState({
+					// 	userPage:userName
+					// })
+				}
+
 			})
 			.catch(e => console.log(e));
 	};
-
 
 	render() {
 		const {
@@ -70,6 +102,9 @@ class LogIn extends Component {
 							Submit
 						</button>
 					</form>
+					<div className={` error ${this.state.UserErrorLog}`}>Not find User</div>
+					<div className={` error ${this.state.PasswordNotCorrect}`}>Not correct password</div>
+					<button onClick={() => { this.props.updateData(this.state.userPage)}}>test</button>
 				</div>
 			</div>
 		)
