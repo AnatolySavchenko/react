@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
-import axios from "axios";
+import axios from 'axios';
+
 
 class SignUp extends Component {
 	state = {
@@ -39,8 +40,7 @@ class SignUp extends Component {
 		const {
 			userName,
 			password,
-			passwordCheck,
-			users
+			passwordCheck
 		} = this.state;
 
 
@@ -94,15 +94,16 @@ class SignUp extends Component {
 					this.setState({
 						PasswordErrorCheck: 'PasswordErrorCheck'
 					});
-					console.log(this.state);
 					setTimeout(() => {
 						this.setState({
 							PasswordErrorCheck: ''
 						});
-					}, 3000000);
+					}, 3000);
 					break;
 				default:
 			}
+
+			this.props.history.push(`/user:${this.state.userPage}`);
 
 		})
 			.catch(e => console.log(e));
@@ -160,8 +161,11 @@ class SignUp extends Component {
 					</form>
 					<div className={` error ${this.state.UserError}`}>it's User registered</div>
 					<div className={` error ${this.state.PasswordErrorSpaces}`}>Your password have spaces,please rewrite</div>
-					<div className={` error ${this.state.PasswordErrorShort}`}>Your password very short, you need have min 6 symbols</div>
-					<div className={` error ${this.state.PasswordErrorCheck}`}>Your password  not match with field check password</div>
+					<div className={` error ${this.state.PasswordErrorShort}`}>Your password very short, you need have min 6
+						symbols
+					</div>
+					<div className={` error ${this.state.PasswordErrorCheck}`}>Your password not match with field check password
+					</div>
 				</div>
 			</div>
 		)

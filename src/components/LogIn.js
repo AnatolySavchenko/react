@@ -1,5 +1,7 @@
 import React, {Component} from 'react';
-import axios from "axios";
+
+import axios from 'axios';
+import {withRouter} from 'react-router';
 
 class LogIn extends Component {
 	state = {
@@ -8,7 +10,7 @@ class LogIn extends Component {
 		password: '',
 		UserErrorLog: '',
 		PasswordNotCorrect: '',
-		userPage:'test'
+		userPage: ''
 	};
 
 
@@ -32,37 +34,40 @@ class LogIn extends Component {
 			password
 		})
 			.then(res => {
-				if (res.data === userName) {
-					switch (res.data) {
-						case "Not find User":
+				switch (res.data) {
+					case "Not find User":
+						this.setState({
+							UserErrorLog: 'UserErrorLog'
+						});
+						setTimeout(() => {
 							this.setState({
-								UserErrorLog: 'UserErrorLog'
+								UserErrorLog: ''
 							});
-							console.log(this.state);
-							setTimeout(() => {
-								this.setState({
-									UserErrorLog: ''
-								});
-							}, 3000);
-							break;
-						case 'Not correct password':
+						}, 3000);
+						break;
+					case 'Not correct password':
+						this.setState({
+							PasswordNotCorrect: 'PasswordNotCorrect'
+						});
+						setTimeout(() => {
 							this.setState({
-								PasswordNotCorrect: 'PasswordNotCorrect'
+								PasswordNotCorrect: ''
 							});
-							setTimeout(() => {
-								this.setState({
-									PasswordNotCorrect: ''
-								});
-							}, 3000);
-							break;
-						default:
-					}
-				}else{
-					// this.setState({
-					// 	userPage:userName
-					// })
+						}, 3000);
+						break;
+					default:
 				}
+				let stringUserName = res.data;
+				if (String(stringUserName) === this.state.userName) {
+					this.setState({
+						userPage: this.state.userName,
+						userName: '',
+						password: ''
+					});
 
+					this.props.history.push(`/user:${this.state.userPage}`);
+
+				}
 			})
 			.catch(e => console.log(e));
 	};
@@ -72,16 +77,27 @@ class LogIn extends Component {
 			userName,
 			password
 		} = this.state;
+
 		return (
-			<div className="backgroundForLog">
-				<div className="container">
-					<form className="forForm">
-						<h3 className='for_log'>Log In</h3>
+			<div
+				className="backgroundForLog"
+			>
+				<div
+					className="container"
+				>
+					<form
+						className="forForm"
+					>
+						<h3
+							className='for_log'
+						>
+							Log In
+						</h3>
 						<div>
 							<input
 								className="forEmail"
 								type="text"
-								placeholder="Email Address"
+								placeholder="User Name"
 								onChange={this.changeInputName}
 								value={userName}
 								required
@@ -92,7 +108,9 @@ class LogIn extends Component {
 								className="forPassword"
 								type="password"
 								placeholder="Set A Password"
-								onChange={this.changeInputPassword} value={password} required/>
+								onChange={this.changeInputPassword}
+								value={password}
+								required/>
 						</div>
 						<button
 							className="forSubmit"
@@ -102,13 +120,20 @@ class LogIn extends Component {
 							Submit
 						</button>
 					</form>
-					<div className={` error ${this.state.UserErrorLog}`}>Not find User</div>
-					<div className={` error ${this.state.PasswordNotCorrect}`}>Not correct password</div>
-					<button onClick={() => { this.props.updateData(this.state.userPage)}}>test</button>
+					<div
+						className={` error ${this.state.UserErrorLog}`}
+					>
+						Not find User
+					</div>
+					<div
+						className={` error ${this.state.PasswordNotCorrect}`}
+					>
+						Not correct password
+					</div>
 				</div>
 			</div>
 		)
 	}
 }
 
-export default LogIn;
+export default withRouter(LogIn);

@@ -5,11 +5,19 @@
       <change beforePath="$PROJECT_DIR$/../jquery/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../jquery/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../jquery/js.js" beforeDir="false" afterPath="$PROJECT_DIR$/../jquery/js.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../node_js/controllers/userController.js" beforeDir="false" afterPath="$PROJECT_DIR$/../node_js/controllers/userController.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../node_js/model/modelUser.js" beforeDir="false" afterPath="$PROJECT_DIR$/../node_js/model/modelUser.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/CountItems.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/CountItems.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Header.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Header.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/LogIn.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/LogIn.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/SignUp.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/SignUp.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/TodoMain.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/TodoMain.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/addTodo.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/addTodo.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -25,7 +33,7 @@
     </option>
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../node_js" />
   </component>
   <component name="JsFlowSettings">
     <service-enabled>true</service-enabled>
@@ -91,7 +99,8 @@
       <workItem from="1569307777349" duration="28733000" />
       <workItem from="1569393633559" duration="20049000" />
       <workItem from="1569476079994" duration="44079000" />
-      <workItem from="1569567230939" duration="27273000" />
+      <workItem from="1569567230939" duration="28060000" />
+      <workItem from="1569999068002" duration="30401000" />
     </task>
     <servers />
   </component>

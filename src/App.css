@@ -2,8 +2,7 @@
     width: 100%;
     font-size: 100px;
     font-weight: 100;
-    color: rgba(175, 47, 47, 0.15);
-    margin-bottom: 0px;
+    margin-bottom: 20px;
     text-align: center;
 }
 
@@ -210,4 +209,15 @@ input:checked + span {
 .PasswordErrorCheck {
     top:-86px;
 }
-
+.userPage{
+    background-color: #3f0b33;
+    width: 100%;
+    height: 100%;
+    color: white;
+    font-family: "Times New Roman", Georgia, Serif;
+    font-size: 24px;
+    position: fixed;
+}
+.userPage p{
+    padding: 50px 0 0 50px;
+}
