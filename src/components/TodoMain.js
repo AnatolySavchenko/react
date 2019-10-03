@@ -1,12 +1,10 @@
 import React, {Component} from 'react';
-import {BrowserRouter, Route} from 'react-router-dom';
 import axios from 'axios';
 
 import AddTodo from './addTodo';
 import TodoList from './TodoList';
 import CountItems from './CountItems';
 import ButtonForActive from './ButtonForActive';
-
 
 
 class TodoMain extends Component {
@@ -57,7 +55,6 @@ class TodoMain extends Component {
 					classNameEdited,
 					value,
 				};
-				console.log('--------res', res);
 				this.setState({
 					todos: [...todos, newItem],
 					value: ''
@@ -175,6 +172,8 @@ class TodoMain extends Component {
 
 
 	render() {
+		let userPath = this.props.history.location.pathname;
+		let user = userPath.slice(6);
 		let renderArray = [];
 		switch (this.state.modelTabs) {
 			case "All":
@@ -188,38 +187,38 @@ class TodoMain extends Component {
 				break;
 		}
 		return (
-					<div
-						className='container'
-						onBlur={this.onBlurHandler}
-					>
-						<h1
-							className='caption_todo'
-						>
-							todos
-						</h1>
-						<AddTodo
-							item={this.state.value}
-							handleChange={this.handleChange}
-							handleSubmit={this.handleSubmit}
-							handleKeyPress={this.handleKeyPress}
-							handleCheckAll={this.handleCheckAll}
-						/>
-						<TodoList
-							items={renderArray}
-							handleDeleteItem={this.handleDeleteItem}
-							changeState={this.changeState}
-							onDblClick={this.onDblClick}
-							onChangeElement={this.onChangeElement}
-						/>
-						<CountItems
-							items={this.state.todos}
-						/>
-						<ButtonForActive
-							deleteCompleteItems={this.deleteCompleteItems}
-							handleShowTabs={this.handleShowTabs}
-							items={this.state.todos}
-						/>
-					</div>
+			<div
+				className='container'
+				onBlur={this.onBlurHandler}
+			>
+				<h1
+					className='caption_todo'
+				>
+					Welcome {user} ! It's your Todo List
+				</h1>
+				<AddTodo
+					item={this.state.value}
+					handleChange={this.handleChange}
+					handleSubmit={this.handleSubmit}
+					handleKeyPress={this.handleKeyPress}
+					handleCheckAll={this.handleCheckAll}
+				/>
+				<TodoList
+					items={renderArray}
+					handleDeleteItem={this.handleDeleteItem}
+					changeState={this.changeState}
+					onDblClick={this.onDblClick}
+					onChangeElement={this.onChangeElement}
+				/>
+				<CountItems
+					items={this.state.todos}
+				/>
+				<ButtonForActive
+					deleteCompleteItems={this.deleteCompleteItems}
+					handleShowTabs={this.handleShowTabs}
+					items={this.state.todos}
+				/>
+			</div>
 		)
 	}
 }
