@@ -14,8 +14,8 @@ class App extends Component {
 		return (
 			<BrowserRouter>
 				<Header/>
-				<Route exact path="/user:name" component={TodoMain}  />
-				<Route path="/logIn" component={LogIn} />
+				<Route exact path="/user:name" component={TodoMain}/>
+				<Route path="/logIn" component={LogIn}/>
 				<Route path="/signUp" component={SignUp}/>
 			</BrowserRouter>
 		)

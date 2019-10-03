@@ -10,6 +10,7 @@ import ButtonForActive from './ButtonForActive';
 class TodoMain extends Component {
 	state = {
 		todos: [],
+		userName:'123456',
 		modelTabs: 'All',
 		classNameEdited: '',
 		value: '',
@@ -19,8 +20,10 @@ class TodoMain extends Component {
 
 
 	componentDidMount() {
-		axios.get(`http://localhost:5000/todo/`)
+		const {userName} = this.state;
+		axios.get(`http://localhost:5000/user/123456`)
 			.then(res => {
+				console.log('--------res.data', res);
 				this.setState({
 					todos: res.data
 				});
@@ -38,16 +41,21 @@ class TodoMain extends Component {
 		const {
 			value,
 			classNameEdited,
-			todos
+			todos,
+			userName,
+			status
 		} = this.state;
 
 		if (!value) {
 			alert('Enter text!');
 		} else {
-			axios.post(`http://localhost:5000/todo/`, {
+			axios.put(`http://localhost:5000/user/123456`, {
 				value,
 				classNameEdited,
+				userName,
+				status
 			}).then((res) => {
+				console.log('--------res.data', res.data);
 				const {status, _id, classNameEdited, value} = res.data;
 				const newItem = {
 					status,
