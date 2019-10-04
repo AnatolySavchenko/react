@@ -6,11 +6,12 @@ import TodoList from './TodoList';
 import CountItems from './CountItems';
 import ButtonForActive from './ButtonForActive';
 
+import {withRouter} from 'react-router';
 
 class TodoMain extends Component {
 	state = {
 		todos: [],
-		userName:'123456',
+		userName: '',
 		modelTabs: 'All',
 		classNameEdited: '',
 		value: '',
@@ -20,12 +21,16 @@ class TodoMain extends Component {
 
 
 	componentDidMount() {
-		const {userName} = this.state;
-		axios.get(`http://localhost:5000/user/123456`)
+		let userPath = this.props.history.location.pathname;
+		let user = userPath.slice(6);
+
+		axios.post(`http://localhost:5000/user/${user}/task`, {
+			user
+		})
 			.then(res => {
-				console.log('--------res.data', res);
 				this.setState({
-					todos: res.data
+					todos: res.data,
+					userName:user
 				});
 			})
 			.catch(e => console.log(e));
@@ -43,19 +48,18 @@ class TodoMain extends Component {
 			classNameEdited,
 			todos,
 			userName,
-			status
+			status,
 		} = this.state;
 
 		if (!value) {
 			alert('Enter text!');
 		} else {
-			axios.put(`http://localhost:5000/user/123456`, {
+			axios.put(`http://localhost:5000/user/${userName}`, {
 				value,
 				classNameEdited,
 				userName,
 				status
 			}).then((res) => {
-				console.log('--------res.data', res.data);
 				const {status, _id, classNameEdited, value} = res.data;
 				const newItem = {
 					status,
@@ -79,10 +83,11 @@ class TodoMain extends Component {
 	};
 
 	handleDeleteItem = (id) => {
-		const {todos} = this.state;
-		todos.forEach((item, i) => {
+		const {todos, userName} = this.state;
+
+		todos.forEach((item) => {
 			if (item._id === id) {
-				axios.delete(`http://localhost:5000/todo/${item._id}`, {data: todos[i]})
+				axios.delete(`http://localhost:5000/user/${userName}/${id}`, {data: {id, userName, todos}})
 					.then(res => {
 						this.setState({
 							todos: res.data
@@ -95,11 +100,11 @@ class TodoMain extends Component {
 
 
 	changeState = (id) => {
-		const {todos} = this.state;
+		const {todos, userName} = this.state;
 		todos.forEach((item, i) => {
 			if (item._id === id) {
 				item.status = !item.status;
-				axios.put(`http://localhost:5000/todo/${item._id}`, todos[i])
+				axios.put(`http://localhost:5000/user/${userName}/${id}`, {todos, userName})
 					.then((res) => {
 						this.setState({
 							todos: res.data
@@ -111,20 +116,21 @@ class TodoMain extends Component {
 	};
 
 	deleteCompleteItems = () => {
-		axios.delete('http://localhost:5000/todo')
+		const {userName, todos} = this.state;
+		axios.delete(`http://localhost:5000/user/${userName}/task`, {data: {userName, todos}})
 			.then((res) => {
 				this.setState({
-					todos: res.data.filter(item => !item.status)
+					todos: res.data
 				})
 			})
 			.catch(e => console.log(e));
 	};
 
 	handleCheckAll = () => {
-		const {todos} = this.state;
+		const {todos, userName} = this.state;
 		const bool = todos.every(item => item.status);
-
-		axios.put('http://localhost:5000/todo', {data: !bool})
+		console.log('--------bool', bool);
+		axios.put(`http://localhost:5000/user/${userName}/task`, {data: !bool, todos, userName})
 			.then((res) => {
 				this.setState({
 					todos: res.data
@@ -155,11 +161,11 @@ class TodoMain extends Component {
 	};
 
 	onBlurHandler = () => {
-		let {todos, valueEdit} = this.state;
+		let {todos, valueEdit, userName} = this.state;
 		todos.forEach((item, i) => {
 			if (item.classNameEdited === 'edited') {
 				item.value = valueEdit;
-				axios.put(`http://localhost:5000/todo/${item._id}`, todos[i])
+				axios.put(`http://localhost:5000/user/${userName}/${item._id}`, {todos, userName, i})
 					.then((res) => {
 						item.classNameEdited = '';
 						this.setState({
