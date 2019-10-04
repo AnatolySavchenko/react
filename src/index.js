@@ -4,12 +4,16 @@ import {createStore} from 'redux';
 import {Provider} from 'react-redux';
 import './index.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import App from './App';
 import * as serviceWorker from './serviceWorker';
+import rootReducer from './reducers';
+import App from './App';
 
+const store = createStore(rootReducer);
 
 render(
-	<App/>,
+	<Provider store={store}>
+	<App/>
+	</Provider>,
 	document.getElementById('root')
 );
 

@@ -44,7 +44,7 @@ class SignUp extends Component {
 		} = this.state;
 
 
-		axios.post(`http://localhost:5000/user/signIn/`, {
+		axios.post(`http://localhost:5000/user/`, {
 			userName,
 			password,
 			passwordCheck
@@ -103,7 +103,7 @@ class SignUp extends Component {
 				default:
 			}
 
-			this.props.history.push(`/user:${this.state.userPage}`);
+	//		this.props.history.push(`/user:${this.state.userPage}`);
 
 		})
 			.catch(e => console.log(e));

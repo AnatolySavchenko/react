@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
-
 import axios from 'axios';
-import {withRouter} from 'react-router';
+
+// import {withRouter} from 'react-router';
 
 class LogIn extends Component {
 	state = {
@@ -12,6 +12,17 @@ class LogIn extends Component {
 		PasswordNotCorrect: '',
 		userPage: ''
 	};
+
+	componentDidMount() {
+		axios.get(`http://localhost:5000/user/`)
+			.then(res => {
+				this.setState({
+					users: res.data
+				});
+			})
+			.catch(e => console.log(e));
+
+	}
 
 
 	changeInputName = (e) => {
@@ -29,7 +40,7 @@ class LogIn extends Component {
 	LogInSubmit = () => {
 		const {userName, password} = this.state;
 
-		axios.post(`http://localhost:5000/user/logIn/`, {
+		axios.post(`http://localhost:5000/user/${userName}/`, {
 			userName,
 			password
 		})
@@ -64,9 +75,7 @@ class LogIn extends Component {
 						userName: '',
 						password: ''
 					});
-
-					this.props.history.push(`/user:${this.state.userPage}`);
-
+						this.props.history.push(`/user:${this.state.userPage}`);
 				}
 			})
 			.catch(e => console.log(e));
@@ -136,4 +145,4 @@ class LogIn extends Component {
 	}
 }
 
-export default withRouter(LogIn);
+export default LogIn;
