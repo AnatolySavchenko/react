@@ -1,5 +1,10 @@
-export const AddTodo = text => ({
-	type: 'ADD_TODO',
-	text
-});
+import {ACTION_ADD_TODO} from '../index';
+
+const addTodo = (text) => {
+	return {
+		type:ACTION_ADD_TODO,
+		text
+	}
+};
+
 

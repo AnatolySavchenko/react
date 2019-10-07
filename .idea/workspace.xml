@@ -5,9 +5,12 @@
       <change beforePath="$PROJECT_DIR$/../jquery/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../jquery/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../jquery/js.js" beforeDir="false" afterPath="$PROJECT_DIR$/../jquery/js.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../node_js/controllers/userController.js" beforeDir="false" afterPath="$PROJECT_DIR$/../node_js/controllers/userController.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../node_js/routes/users.js" beforeDir="false" afterPath="$PROJECT_DIR$/../node_js/routes/users.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/actions/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/actions/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/TodoMain.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/TodoMain.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/reducers/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/reducers/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/reducers/todos.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/reducers/todos.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -23,7 +26,7 @@
     </option>
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../node_js" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="JsFlowSettings">
     <service-enabled>true</service-enabled>
@@ -93,6 +96,7 @@
       <workItem from="1569999068002" duration="30401000" />
       <workItem from="1570085231083" duration="34182000" />
       <workItem from="1570176077715" duration="23728000" />
+      <workItem from="1570431886249" duration="11816000" />
     </task>
     <servers />
   </component>

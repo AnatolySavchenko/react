@@ -6,6 +6,8 @@ import TodoList from './TodoList';
 import CountItems from './CountItems';
 import ButtonForActive from './ButtonForActive';
 
+
+
 import {withRouter} from 'react-router';
 
 class TodoMain extends Component {
@@ -18,6 +20,7 @@ class TodoMain extends Component {
 		valueEdit: '',
 		status: false
 	};
+
 
 
 	componentDidMount() {
@@ -100,11 +103,11 @@ class TodoMain extends Component {
 
 
 	changeState = (id) => {
-		const {todos, userName} = this.state;
+		const {todos, userName, classNameEdited} = this.state;
 		todos.forEach((item, i) => {
 			if (item._id === id) {
 				item.status = !item.status;
-				axios.put(`http://localhost:5000/user/${userName}/${id}`, {todos, userName})
+				axios.put(`http://localhost:5000/user/${userName}/${id}`, {todos, userName, classNameEdited, i})
 					.then((res) => {
 						this.setState({
 							todos: res.data

@@ -10,6 +10,8 @@ import App from './App';
 
 const store = createStore(rootReducer);
 
+export const ACTION_ADD_TODO = 'ACTION_ADD_TODO';
+
 render(
 	<Provider store={store}>
 	<App/>
